@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+
+.Content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 75px;
+}
+
+.MuiPaper-elevation1 {
+  box-shadow: 5px 10px #2c2c2c27 !important;
+}
+
+#panel1a-header {
+  background-color: rgb(243, 195, 195);
+}
+
+#panel1a-header:hover {
+  background-color: rgb(253, 113, 113);
+}
+
+.MuiAccordionDetails-root {
+  display: flex !important;
+  justify-content: center;
+  border-width: 0px 5px 5px 5px;
+  border-style: solid;
+  border-color: rgb(243, 195, 195);
+}
+
+.MuiAccordionDetails-root {
+  /* background-color: whitesmoke; */
+}
