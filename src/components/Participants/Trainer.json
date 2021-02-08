@@ -598,5 +598,77 @@
           { "type": "Steel", "name": "Copperajah" },
           { "type": "Water", "name": "Golduck" }
         ]
+      },
+      {
+        "name": "TheLoooon",
+        "imgUrl": "",
+        "pokemons": [
+          { "type": "Bug", "name": "Buzzwole" },
+          { "type": "Dark", "name": "Krookodile" },
+          { "type": "Dragon", "name": "Dragapult" },
+          { "type": "Electric", "name": "Raikou" },
+          { "type": "Fairy", "name": "Primarina" },
+          { "type": "Fighting", "name": "Sirfetchd" },
+          { "type": "Fire", "name": "Cinderace" },
+          { "type": "Flying", "name": "Drifblim" },
+          { "type": "Ghost", "name": "Polteageist" },
+          { "type": "Grass", "name": "Ludicolo" },
+          { "type": "Ground", "name": "Garchomp-Mega" },
+          { "type": "Ice", "name": "Weavile" },
+          { "type": "Normal", "name": "Kecleon" },
+          { "type": "Poison", "name": "Nidoqueen" },
+          { "type": "Psychic", "name": "Bronzong" },
+          { "type": "Rock", "name": "Gigalith" },
+          { "type": "Steel", "name": "Durant" },
+          { "type": "Water", "name": "Cramorant" }
+        ]
+      },
+      {
+        "name": "Liljaka",
+        "imgUrl": "",
+        "pokemons": [
+          { "type": "Bug", "name": "Orbeetle" },
+          { "type": "Dark", "name": "Sableye-Mega" },
+          { "type": "Dragon", "name": "Appletun" },
+          { "type": "Electric", "name": "Thundurus-Therian" },
+          { "type": "Fairy", "name": "Granbull" },
+          { "type": "Fighting", "name": "Hitmonchan" },
+          { "type": "Fire", "name": "Volcarona" },
+          { "type": "Flying", "name": "Moltres-Galar" },
+          { "type": "Ghost", "name": "Marowak-Alola" },
+          { "type": "Grass", "name": "Ludicolo" },
+          { "type": "Ground", "name": "Donphan" },
+          { "type": "Ice", "name": "Froslass" },
+          { "type": "Normal", "name": "Braviary" },
+          { "type": "Poison", "name": "Crobat" },
+          { "type": "Psychic", "name": "Jirachi" },
+          { "type": "Rock", "name": "Omastar" },
+          { "type": "Steel", "name": "Duraludon" },
+          { "type": "Water", "name": "Carracosta" }
+        ]
+      },
+      {
+        "name": "TheTired",
+        "imgUrl": "",
+        "pokemons": [
+          { "type": "Bug", "name": "Butterfree" },
+          { "type": "Dark", "name": "Moltres-Galar" },
+          { "type": "Dragon", "name": "Altaria" },
+          { "type": "Electric", "name": "Raikou" },
+          { "type": "Fairy", "name": "Tapu-Bulu" },
+          { "type": "Fighting", "name": "Terrakion" },
+          { "type": "Fire", "name": "Arcanine" },
+          { "type": "Flying", "name": "Swanna" },
+          { "type": "Ghost", "name": "Marowak-Alola" },
+          { "type": "Grass", "name": "Wormadam-Plant" },
+          { "type": "Ground", "name": "Palossand" },
+          { "type": "Ice", "name": "Frosmoth" },
+          { "type": "Normal", "name": "Persian" },
+          { "type": "Poison", "name": "Swalot" },
+          { "type": "Psychic", "name": "Gothitelle" },
+          { "type": "Rock", "name": "Stonjourner" },
+          { "type": "Steel", "name": "Steelix" },
+          { "type": "Water", "name": "Sharpedo" }
+        ]
       }
 ]
