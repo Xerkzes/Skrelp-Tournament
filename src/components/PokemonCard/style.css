@@ -1,0 +1,33 @@
+.pokemon-card {
+  height: 6rem;
+  width: 6rem;
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 0.5px;
+}
+
+.pokemon-card-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0;
+  align-self: center;
+}
+
+.pokemon-card-name {
+  width: 100%;
+  margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
+  min-width: unset;
+  text-align: center;
+}
+
+.pokemon-card-isQualified {
+  background-color: lightblue;
+}
+
+.pokemon-card-notQualified {
+  background-color: lightsalmon;
+}

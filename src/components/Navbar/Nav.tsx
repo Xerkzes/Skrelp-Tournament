@@ -11,6 +11,9 @@ export const Nav: React.FC<NavProps> = ({}) => {
       <Link to="/">
         <span className="material-icons nav-icon">account_circle</span>
       </Link>
+      <Link to="/matches">
+        <span className="material-icons nav-icon">sports_esports</span>{" "}
+      </Link>
       <Link to="/random_pokemon_generator">
         <img className="nav-icon" src={logo} alt="generate random Pokemons" />
       </Link>

@@ -5,6 +5,7 @@ import { Nav } from "./components/Navbar/Nav";
 import { Participants } from "./components/Participants/Participants";
 import { Counter } from "./components/Count/Counter";
 import { Generator } from "./components/RandomPokemonGenerator/Generator";
+import { Matches } from "./components/Match/Match";
 
 const App: React.FC = () => {
   return (
@@ -12,12 +13,11 @@ const App: React.FC = () => {
       <Router>
         <Nav />
 
-        <Switch>
-          <div className="Content">
-            <Route path="/" exact component={Participants} />
-            <Route path="/random_pokemon_generator" component={Generator} />
-          </div>
-        </Switch>
+        <div className="Content">
+          <Route path="/" exact component={Participants} />
+          <Route path="/random_pokemon_generator" exact component={Generator} />
+          <Route path="/matches" exact component={Matches} />
+        </div>
       </Router>
     </div>
   );

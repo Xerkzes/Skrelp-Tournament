@@ -1,16 +1,21 @@
-.App {
-  display: flex;
-  min-height: 100vh;
+body {
   background-color: whitesmoke;
 }
 
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
 .Content {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  padding-left: 75px;
+  margin: 1rem 1rem 2rem 1rem;
+  width: 100%;
+  padding-left: 5rem;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
 }
 
 .MuiPaper-elevation1 {
@@ -31,8 +36,4 @@
   border-width: 0px 5px 5px 5px;
   border-style: solid;
   border-color: rgb(243, 195, 195);
-}
-
-.MuiAccordionDetails-root {
-  /* background-color: whitesmoke; */
 }

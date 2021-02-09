@@ -25,7 +25,6 @@ export const Trainer: React.FC<TrainerProps> = ({ trainer }) => {
     if (!loadContent) {
       setLoadContent(true);
     }
-    console.log({ loadContent });
   }
 
   return (

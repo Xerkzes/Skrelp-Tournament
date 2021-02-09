@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import typeColors from "../../helpers/TypeColor";
+import AllPokemonData from "../../helpers/Pokemons.json";
 import "./style.css";
 
 interface PokemonProps {
@@ -7,148 +8,6 @@ interface PokemonProps {
     type: string;
     name: string;
   };
-}
-
-function createPokemonUrl(pokemonName: string) {
-  const name: string = pokemonName.toLowerCase();
-
-  if (name.includes("-alola")) {
-    return "-alola";
-  }
-
-  if (name.includes("-mega")) {
-    if (name.includes("-x")) {
-      return "-mega-x";
-    }
-    if (name.includes("-y")) {
-      return "-mega-y";
-    }
-    return "-mega";
-  }
-
-  if (name.includes("-galar")) {
-    return "-galar";
-  }
-
-  // it's one of the Rotom forms
-  if (name.includes("rotom-")) {
-    if (name.includes("fan")) {
-      return "-fan";
-    }
-    if (name.includes("frost")) {
-      return "-frost";
-    }
-    if (name.includes("heat")) {
-      return "-heat";
-    }
-    if (name.includes("mow")) {
-      return "-mow";
-    }
-    if (name.includes("wash")) {
-      return "-wash";
-    }
-  }
-
-  // it's one of the Oricorio forms
-  if (name.includes("oricorio-")) {
-    if (name.includes("pau")) {
-      return "-pau";
-    }
-    if (name.includes("pom")) {
-      return "--pom-pom";
-    }
-    if (name.includes("sensu")) {
-      return "-sensu";
-    }
-  }
-
-  // it's one of the Indeedee forms
-  if (name.includes("indeedee-")) {
-    if (name.includes("-female")) {
-      return "-f";
-    }
-  }
-
-  // it's one of the Zygarde forms
-  if (name.includes("zygarde-")) {
-    if (name.includes("-10")) {
-      return "-10";
-    }
-    if (name.includes("-complete")) {
-      return "-complete";
-    }
-  }
-
-  if (name === "thundurus-therian") {
-    return "-therian";
-  }
-
-  return "";
-}
-
-function createPokemonForFetchDexNr(pokemonName: string) {
-  const name: string = pokemonName.toLowerCase();
-
-  if (name.includes("-alola")) {
-    return name.substring(0, name.length - 6);
-  }
-
-  if (name.includes("-mega")) {
-    if (name.includes("-x") || name.includes("-y")) {
-      return name.substring(0, name.length - 7);
-    }
-    return name.substring(0, name.length - 5);
-  }
-
-  if (name.includes("-galar")) {
-    return name.substring(0, name.length - 6);
-  }
-
-  if (name.includes("wormadam")) {
-    return "wormadam";
-  }
-
-  if (name.includes("toxtricity")) {
-    return "toxtricity";
-  }
-
-  if (name.includes("rotom-")) {
-    return "rotom";
-  }
-
-  if (name === "aegislash-shield" || name === "aegislash-blade") {
-    return "aegislash";
-  }
-
-  if (name.includes("meloetta-")) {
-    return "meloetta";
-  }
-
-  if (name.includes("oricorio-")) {
-    return "oricorio";
-  }
-
-  if (name.includes("gourgeist-")) {
-    return "gourgeist";
-  }
-
-  if (name.includes("indeedee-")) {
-    return "indeedee";
-  }
-
-  if (name.includes("zygarde-")) {
-    return "zygarde";
-  }
-
-  if (name.includes("minior-")) {
-    return "minior";
-  }
-
-  if (name.includes("thundurus")) {
-    return "thundurus";
-  }
-
-  return name;
 }
 
 export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
@@ -162,23 +21,24 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
 
   useEffect(() => {
     async function loadPokemons() {
+      // get Data from the specific Pokemon
+      const pokemonData = AllPokemonData.filter((data) => {
+        if (data.name === pokemon.name) {
+          return data;
+        }
+      });
       // get data from API
       const fetchDataUrl =
-        "https://pokeapi.co/api/v2/pokemon/" + pokemon.name.toLowerCase();
-      const fetchDexNrUrl =
-        "https://pokeapi.co/api/v2/pokemon-species/" +
-        createPokemonForFetchDexNr(pokemon.name);
-
+        "https://pokeapi.co/api/v2/pokemon/" + pokemonData[0].dexNr;
       const response = await fetch(fetchDataUrl);
       const data = await response.json();
-      const response2 = await fetch(fetchDexNrUrl);
-      const dexNr = await response2.json();
 
-      // add suffix if needed
-      const suffix = createPokemonUrl(pokemon.name);
-      // sets Sprite Url
-      setImgUrl("sprites/normal/" + dexNr.id + suffix + ".png");
-      // helpers/sprites/png/normal
+      // set Sprite Url
+      const suffix =
+        pokemonData[0].spriteSuffix === undefined
+          ? ""
+          : pokemonData[0].spriteSuffix;
+      setImgUrl("sprites/normal/" + pokemonData[0].dexNr + suffix + ".png");
 
       try {
         setHP(data.stats[0].base_stat);
@@ -189,7 +49,7 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
         setSpe(data.stats[5].base_stat);
       } catch (err) {
         // console.log(data);
-        console.log(err);
+        // console.log(err);
       }
     }
     loadPokemons();

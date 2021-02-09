@@ -1,0 +1,27 @@
+.matches-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.match-week {
+  width: 75vw;
+}
+
+.match {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+}
+
+.team {
+  width: 20vw;
+  align-self: center;
+}
+
+.team-left {
+  text-align: end;
+}
+
+.vs {
+  margin: auto 1rem;
+}
