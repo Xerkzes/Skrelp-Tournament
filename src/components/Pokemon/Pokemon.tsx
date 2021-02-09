@@ -28,10 +28,10 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
         }
       });
       // get data from API
-      const fetchDataUrl =
-        "https://pokeapi.co/api/v2/pokemon/" + pokemonData[0].dexNr;
-      const response = await fetch(fetchDataUrl);
-      const data = await response.json();
+      // const fetchDataUrl =
+      //   "https://pokeapi.co/api/v2/pokemon/" + pokemonData[0].dexNr;
+      // const response = await fetch(fetchDataUrl);
+      // const data = await response.json();
 
       // set Sprite Url
       const suffix =
@@ -40,17 +40,17 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
           : pokemonData[0].spriteSuffix;
       setImgUrl("sprites/normal/" + pokemonData[0].dexNr + suffix + ".png");
 
-      try {
-        setHP(data.stats[0].base_stat);
-        setAtk(data.stats[1].base_stat);
-        setDef(data.stats[2].base_stat);
-        setSpA(data.stats[3].base_stat);
-        setSpD(data.stats[4].base_stat);
-        setSpe(data.stats[5].base_stat);
-      } catch (err) {
-        // console.log(data);
-        // console.log(err);
-      }
+      // try {
+      //   setHP(data.stats[0].base_stat);
+      //   setAtk(data.stats[1].base_stat);
+      //   setDef(data.stats[2].base_stat);
+      //   setSpA(data.stats[3].base_stat);
+      //   setSpD(data.stats[4].base_stat);
+      //   setSpe(data.stats[5].base_stat);
+      // } catch (err) {
+      //   // console.log(data);
+      //   // console.log(err);
+      // }
     }
     loadPokemons();
   }, []);
@@ -65,9 +65,9 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
       </div>
       <img className="pokemon-img" src={imgUrl} alt="img" />
       <div className="pokemon-name">{pokemon.name}</div>
-      <div className="pokemon-stats">
+      {/* <div className="pokemon-stats">
         {hp} / {atk} / {def} / {spA} / {spD} / {spe}
-      </div>
+      </div> */}
     </div>
   );
 };
