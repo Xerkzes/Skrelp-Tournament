@@ -14,6 +14,7 @@ interface TrainerProps {
     pokemons: {
       type: string;
       name: string;
+      zMove?: boolean | undefined;
     }[];
   };
 }

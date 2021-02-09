@@ -7,6 +7,7 @@ interface PokemonProps {
   pokemon: {
     type: string;
     name: string;
+    zMove?: boolean | undefined;
   };
 }
 
@@ -64,7 +65,10 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
         {pokemon.type}
       </div>
       <img className="pokemon-img" src={imgUrl} alt="img" />
-      <div className="pokemon-name">{pokemon.name}</div>
+      <div className="pokemon-name">
+        {pokemon.name}
+        {pokemon.zMove ? " (z-move)" : null}
+      </div>
       {/* <div className="pokemon-stats">
         {hp} / {atk} / {def} / {spA} / {spD} / {spe}
       </div> */}

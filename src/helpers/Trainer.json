@@ -88,7 +88,7 @@
           { "type": "Ground", "name": "Whiscash" },
           { "type": "Ice", "name": "Beartic" },
           { "type": "Normal", "name": "Spinda" },
-          { "type": "Poison", "name": "Salazzle" },
+          { "type": "Poison", "name": "Salazzle", "zMove": true },
           { "type": "Psychic", "name": "Musharna" },
           { "type": "Rock", "name": "Kabutops" },
           { "type": "Steel", "name": "Metagross" },
@@ -581,7 +581,7 @@
         "pokemons": [
           { "type": "Bug", "name": "Beautifly" },
           { "type": "Dark", "name": "Obstagoon" },
-          { "type": "Dragon", "name": "Salamence" },
+          { "type": "Dragon", "name": "Salamence", "zMove": true },
           { "type": "Electric", "name": "Morpeko" },
           { "type": "Fairy", "name": "Clefable" },
           { "type": "Fighting", "name": "Meloetta" },
@@ -653,7 +653,7 @@
         "pokemons": [
           { "type": "Bug", "name": "Butterfree" },
           { "type": "Dark", "name": "Moltres-Galar" },
-          { "type": "Dragon", "name": "Altaria" },
+          { "type": "Dragon", "name": "Altaria-Mega" },
           { "type": "Electric", "name": "Raikou" },
           { "type": "Fairy", "name": "Tapu-Bulu" },
           { "type": "Fighting", "name": "Terrakion" },
