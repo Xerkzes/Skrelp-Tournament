@@ -2,6 +2,10 @@
     {
       "name": "RhydonMyDeek",
       "imgUrl": "",
+      "team": 1,
+      "division": "red",
+      "wins": 0,
+      "loses": 0,
       "pokemons": [
         { "type": "Bug", "name": "Wormadam-Trash" },
         { "type": "Dark", "name": "Sharpedo-Mega" },
@@ -26,6 +30,10 @@
       {
         "name": "runanbun_",
         "imgUrl": "",
+        "team": 12,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Yanmega" },
           { "type": "Dark", "name": "Hydreigon" },
@@ -50,6 +58,10 @@
       {
         "name": "alienx3",
         "imgUrl": "",
+        "team": 15,
+        "division": "green",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Golisopod" },
           { "type": "Dark", "name": "Malamar" },
@@ -74,6 +86,10 @@
       {
         "name": "ajstyles",
         "imgUrl": "",
+        "team": 28,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Ribombee" },
           { "type": "Dark", "name": "Mandibuzz" },
@@ -98,6 +114,10 @@
       {
         "name": "jmurphy725",
         "imgUrl": "",
+        "team": 27,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Forretress" },
           { "type": "Dark", "name": "Houndoom" },
@@ -122,6 +142,10 @@
       {
         "name": "Mannat",
         "imgUrl": "",
+        "team": 9,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Armaldo" },
           { "type": "Dark", "name": "Houndoom" },
@@ -146,6 +170,10 @@
       {
         "name": "FatherGung",
         "imgUrl": "",
+        "team": 8,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Ribombee" },
           { "type": "Dark", "name": "Crawdaunt" },
@@ -170,6 +198,10 @@
       {
         "name": "r3z3n15",
         "imgUrl": "",
+        "team": 5,
+        "division": "red",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Vikavolt" },
           { "type": "Dark", "name": "Morpeko" },
@@ -194,6 +226,10 @@
       {
         "name": "PapierJoe",
         "imgUrl": "",
+        "team": 16,
+        "division": "green",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Vespiquen" },
           { "type": "Dark", "name": "Malamar" },
@@ -218,6 +254,10 @@
       {
         "name": "vinomatic101",
         "imgUrl": "",
+        "team": 11,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Forretress" },
           { "type": "Dark", "name": "Mandibuzz" },
@@ -242,6 +282,10 @@
       {
         "name": "Drxx",
         "imgUrl": "",
+        "team": 10,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Armaldo" },
           { "type": "Dark", "name": "Weavile" },
@@ -266,6 +310,10 @@
       {
         "name": "QuestionableSpecimen",
         "imgUrl": "",
+        "team": 14,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Shuckle" },
           { "type": "Dark", "name": "Zoroark" },
@@ -290,6 +338,10 @@
       {
         "name": "bumper09",
         "imgUrl": "",
+        "team": 7,
+        "division": "red",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Vivillon" },
           { "type": "Dark", "name": "Shiftry" },
@@ -314,6 +366,10 @@
       {
         "name": "vaugsy17",
         "imgUrl": "",
+        "team": 4,
+        "division": "red",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Parasect" },
           { "type": "Dark", "name": "Sableye" },
@@ -338,6 +394,10 @@
       {
         "name": "daddybeefcakes123",
         "imgUrl": "",
+        "team": 13,
+        "division": "blue",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Orbeetle" },
           { "type": "Dark", "name": "Shiftry" },
@@ -362,6 +422,10 @@
       {
         "name": "lefty8511",
         "imgUrl": "",
+        "team": 17,
+        "division": "green",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Ninjask" },
           { "type": "Dark", "name": "Scrafty" },
@@ -386,6 +450,10 @@
       {
         "name": "X3rkzes",
         "imgUrl": "",
+        "team": 3,
+        "division": "red",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Scolipede" },
           { "type": "Dark", "name": "Grimmsnarl" },
@@ -410,6 +478,10 @@
       {
         "name": "ElementalTem",
         "imgUrl": "",
+        "team": 18,
+        "division": "green",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Vespiquen" },
           { "type": "Dark", "name": "Obstagoon" },
@@ -434,6 +506,10 @@
       {
         "name": "xxsirsavage13xx",
         "imgUrl": "",
+        "team": 24,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Forretress" },
           { "type": "Dark", "name": "Greninja" },
@@ -458,6 +534,10 @@
       {
         "name": "mcguineeplasto",
         "imgUrl": "",
+        "team": 6,
+        "division": "red",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Ninjask" },
           { "type": "Dark", "name": "Honchkrow" },
@@ -482,6 +562,10 @@
       {
         "name": "Wufn1k",
         "imgUrl": "",
+        "team": 23,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Leavanny" },
           { "type": "Dark", "name": "Mightyena" },
@@ -506,6 +590,10 @@
       {
         "name": "099percentbeast",
         "imgUrl": "",
+        "team": 26,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Volbeat" },
           { "type": "Dark", "name": "Sableye" },
@@ -530,6 +618,10 @@
       {
         "name": "rossboss00",
         "imgUrl": "",
+        "team": 20,
+        "division": "green",
+        "wins": 1,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Wormadam-Trash" },
           { "type": "Dark", "name": "Guzzlord" },
@@ -554,6 +646,10 @@
       {
         "name": "Professor_Mad_Lad",
         "imgUrl": "",
+        "team": 22,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Ledian" },
           { "type": "Dark", "name": "Malamar" },
@@ -578,6 +674,10 @@
       {
         "name": "martypyds",
         "imgUrl": "",
+        "team": 2,
+        "division": "red",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Beautifly" },
           { "type": "Dark", "name": "Obstagoon" },
@@ -602,6 +702,10 @@
       {
         "name": "TheLoooon",
         "imgUrl": "",
+        "team": 19,
+        "division": "green",
+        "wins": 0,
+        "loses": 1,
         "pokemons": [
           { "type": "Bug", "name": "Buzzwole" },
           { "type": "Dark", "name": "Krookodile" },
@@ -626,6 +730,10 @@
       {
         "name": "Liljaka",
         "imgUrl": "",
+        "team": 25,
+        "division": "yellow",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Orbeetle" },
           { "type": "Dark", "name": "Sableye-Mega" },
@@ -650,6 +758,10 @@
       {
         "name": "TheTired",
         "imgUrl": "",
+        "team": 21,
+        "division": "green",
+        "wins": 0,
+        "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Butterfree" },
           { "type": "Dark", "name": "Moltres-Galar" },
