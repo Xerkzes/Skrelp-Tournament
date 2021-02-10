@@ -37,3 +37,9 @@ body {
   border-style: solid;
   border-color: rgb(243, 195, 195);
 }
+
+.MuiTypography-root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

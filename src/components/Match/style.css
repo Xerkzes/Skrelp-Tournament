@@ -5,6 +5,9 @@
 
 .match-week {
   width: 75vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .match {
@@ -14,7 +17,7 @@
 }
 
 .team {
-  width: 25vw;
+  width: 11rem;
   align-self: center;
 }
 
