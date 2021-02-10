@@ -1,9 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
+import TrainerData from "../../helpers/Trainer.json";
+
+function sortByValue(prop: any) {
+  return function (a: any, b: any) {
+    if (a[prop] > b[prop]) {
+      return 1;
+    } else if (a[prop] < b[prop]) {
+      return -1;
+    }
+    return 0;
+  };
+}
 
 interface RoosterProps {}
 
+interface Trainer {
+  name: string;
+  imgUrl: string;
+  team: number;
+  division: string;
+  wins: number;
+  loses: number;
+  pokemons: {
+    type: string;
+    name: string;
+    zMove?: boolean | undefined;
+  }[];
+}
+
 export const Rooster: React.FC<RoosterProps> = ({}) => {
+  const [red, setRed] = useState<Trainer[]>([]);
+  const [green, setGreen] = useState<Trainer[]>([]);
+  const [blue, setBlue] = useState<Trainer[]>([]);
+  const [yellow, setYellow] = useState<Trainer[]>([]);
+
+  useEffect(() => {
+    const r: Trainer[] = [];
+    const b: Trainer[] = [];
+    const g: Trainer[] = [];
+    const y: Trainer[] = [];
+    // sort Array by ASC of the team-number
+    TrainerData.sort(sortByValue("team"));
+
+    // puts the trainer into the their rooster
+    TrainerData.forEach((trainer) => {
+      if (trainer.division == "red") {
+        r.push(trainer);
+      } else if (trainer.division == "blue") {
+        b.push(trainer);
+      } else if (trainer.division == "green") {
+        g.push(trainer);
+      } else if (trainer.division == "yellow") {
+        y.push(trainer);
+      }
+    });
+
+    setRed(r);
+    setBlue(b);
+    setGreen(g);
+    setYellow(y);
+  }, []);
+
   return (
     <div>
       <h1 className="header">Divisions</h1>
@@ -12,220 +70,76 @@ export const Rooster: React.FC<RoosterProps> = ({}) => {
         <div className="rooster-division rooster-divison-red">
           <h2>Red Division</h2>
           <div className="rooster-teams">
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team1: RhydonMyDeek</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 2: martypyds</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 3: X3rkzes</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 4: vaugsy17</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 5: r3z3n15</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 6: mcguineeplasto</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 7: bumper09</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
+            {red.map((trainer, idx) => {
+              return (
+                <div key={idx} className="rooster-team">
+                  <p className="rooster-team-name">
+                    {trainer.team}: {trainer.name}
+                  </p>
+                  <div className="rooster-team-scores">
+                    <p className="rooster-team-games-won">{trainer.wins}</p>
+                    <p className="rooster-team-games-lost">{trainer.loses}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="rooster-division rooster-divison-blue">
           <h2>Blue Division</h2>
           <div className="rooster-teams">
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 8: FatherGung</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 9: Mannat</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 10: Drxx</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 11: vinomatic101</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 12: runanbun_</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 13: daddybeefcakes</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 14: QuestionableSpecimen</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
+            {blue.map((trainer, idx) => {
+              return (
+                <div key={idx} className="rooster-team">
+                  <p className="rooster-team-name">
+                    {trainer.team}: {trainer.name}
+                  </p>
+                  <div className="rooster-team-scores">
+                    <p className="rooster-team-games-won">{trainer.wins}</p>
+                    <p className="rooster-team-games-lost">{trainer.loses}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="rooster-division rooster-divison-green">
           <h2>Green Division</h2>
           <div className="rooster-teams">
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 15: alienx3</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 16: PapierJoe</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 17: lefty8511</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 18: ElementalTem</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 19: TheLoooon</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">1</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 20: rossboss00</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">1</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 21: TheTired</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
+            {green.map((trainer, idx) => {
+              return (
+                <div key={idx} className="rooster-team">
+                  <p className="rooster-team-name">
+                    {trainer.team}: {trainer.name}
+                  </p>
+                  <div className="rooster-team-scores">
+                    <p className="rooster-team-games-won">{trainer.wins}</p>
+                    <p className="rooster-team-games-lost">{trainer.loses}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="rooster-division rooster-divison-yellow">
           <h2>Yellow Division</h2>
           <div className="rooster-teams">
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 22: Professor_Mad_Lad</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 23: Wufn1k</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 24: xxsirsavagexx</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 25: Liljaka</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 26: 099percentbeast</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 27: jmurphy725</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
-            <div className="rooster-team">
-              <p className="rooster-team-name">Team 28: ajstyles</p>
-              <div className="rooster-team-scores">
-                <p className="rooster-team-games-won">0</p>
-                <p className="rooster-team-games-lost">0</p>
-              </div>
-            </div>
+            {yellow.map((trainer, idx) => {
+              return (
+                <div key={idx} className="rooster-team">
+                  <p className="rooster-team-name">
+                    {trainer.team}: {trainer.name}
+                  </p>
+                  <div className="rooster-team-scores">
+                    <p className="rooster-team-games-won">{trainer.wins}</p>
+                    <p className="rooster-team-games-lost">{trainer.loses}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
