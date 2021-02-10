@@ -14,7 +14,7 @@
 }
 
 .team {
-  width: 20vw;
+  width: 25vw;
   align-self: center;
 }
 
@@ -24,4 +24,19 @@
 
 .vs {
   margin: auto 1rem;
+}
+
+.match-won {
+  color: green;
+}
+.match-lost {
+  color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .team {
+    width: 25vw;
+    align-self: center;
+    font-size: 0.7rem;
+  }
 }

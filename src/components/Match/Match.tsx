@@ -70,9 +70,9 @@ export const Matches: React.FC<MatchProps> = ({}) => {
                   <p className="team">ElementalTem</p>
                 </div>
                 <div className="match">
-                  <p className="team team-left">TheLoooon</p>
+                  <p className="team team-left match-lost">TheLoooon</p>
                   <p className="vs">-</p>
-                  <p className="team">rossboss00</p>
+                  <p className="team match-won">rossboss00</p>
                 </div>
                 <div className="match">
                   <p className="team team-left">TheTired</p>

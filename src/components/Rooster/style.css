@@ -1,0 +1,73 @@
+.rooster-divisions-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.rooster-division {
+  min-width: 20rem;
+  max-width: 20rem;
+  margin: 5px 5px;
+  border-radius: 20px;
+}
+
+.rooster-division > h2 {
+  text-align: center;
+  border-bottom: 3px dashed white;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.rooster-divison-red {
+  border: 3px solid red;
+  background-color: lightpink;
+}
+.rooster-divison-blue {
+  border: 3px solid blue;
+  background-color: rgb(191, 219, 228);
+}
+.rooster-divison-green {
+  border: 3px solid rgb(63, 235, 63);
+  background-color: rgb(195, 237, 195);
+}
+.rooster-divison-yellow {
+  border: 3px solid yellow;
+  background-color: rgb(253, 253, 165);
+}
+
+.rooster-teams {
+}
+
+.rooster-team {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin: 0 0.5rem;
+}
+.rooster-team:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+
+.rooster-team-name {
+  margin: 0;
+  padding: 0;
+}
+
+.rooster-team-scores {
+  display: flex;
+}
+.rooster-team-scores > p {
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.rooster-team-scores > p:first-child {
+  border-right: 1px solid black;
+}
+
+.rooster-team-games-won {
+  color: green;
+}
+.rooster-team-games-lost {
+  color: red;
+}

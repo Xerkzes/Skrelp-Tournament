@@ -11,6 +11,9 @@ export const Nav: React.FC<NavProps> = ({}) => {
       <Link to="/">
         <span className="material-icons nav-icon">account_circle</span>
       </Link>
+      <Link to="/rooster">
+        <span className="material-icons nav-icon">table_chart</span>{" "}
+      </Link>
       <Link to="/matches">
         <span className="material-icons nav-icon">sports_esports</span>{" "}
       </Link>

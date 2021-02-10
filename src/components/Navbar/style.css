@@ -4,7 +4,7 @@
   height: 100vh;
   position: fixed;
   background-color: lightcoral;
-  padding: 10px 10px 0px 10px;
+  padding: 25px 10px 0px 10px;
   display: flex;
   flex-direction: column;
 }
