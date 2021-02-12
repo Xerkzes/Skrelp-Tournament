@@ -61,7 +61,7 @@
         "team": 15,
         "division": "green",
         "wins": 0,
-        "loses": 0,
+        "loses": 1,
         "pokemons": [
           { "type": "Bug", "name": "Golisopod" },
           { "type": "Dark", "name": "Malamar" },
@@ -228,7 +228,7 @@
         "imgUrl": "",
         "team": 16,
         "division": "green",
-        "wins": 0,
+        "wins": 1,
         "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Vespiquen" },
@@ -564,7 +564,7 @@
         "imgUrl": "",
         "team": 23,
         "division": "yellow",
-        "wins": 0,
+        "wins": 1,
         "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Leavanny" },
@@ -649,7 +649,7 @@
         "team": 22,
         "division": "yellow",
         "wins": 0,
-        "loses": 0,
+        "loses": 1,
         "pokemons": [
           { "type": "Bug", "name": "Ledian" },
           { "type": "Dark", "name": "Malamar" },
