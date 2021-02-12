@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import TrainerData from "../../helpers/Trainer.json";
+import { TrainerLoseWins } from "./TrainerLoseWins";
 
 function sortByValue(prop: any) {
   return function (a: any, b: any) {
@@ -20,8 +21,6 @@ interface Trainer {
   imgUrl: string;
   team: number;
   division: string;
-  wins: number;
-  loses: number;
   pokemons: {
     type: string;
     name: string;
@@ -81,19 +80,7 @@ export const Rooster: React.FC<RoosterProps> = ({}) => {
               <h2>{obj.name} Division</h2>
               <div className="rooster-teams">
                 {obj.array.map((trainer, idx) => {
-                  return (
-                    <div key={idx} className="rooster-team">
-                      <p className="rooster-team-name">
-                        {trainer.team}: {trainer.name}
-                      </p>
-                      <div className="rooster-team-scores">
-                        <p className="rooster-team-games-won">{trainer.wins}</p>
-                        <p className="rooster-team-games-lost">
-                          {trainer.loses}
-                        </p>
-                      </div>
-                    </div>
-                  );
+                  return <TrainerLoseWins key={idx} trainer={trainer} />;
                 })}
               </div>
             </div>
