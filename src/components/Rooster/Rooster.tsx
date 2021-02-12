@@ -51,10 +51,12 @@ export const Rooster: React.FC<RoosterProps> = ({}) => {
 
   useEffect(() => {
     // sort Array by ASC of the team-number
-    TrainerData.sort(sortByValue("team"));
+    let data = JSON.parse(JSON.stringify(TrainerData));
+    data.sort(sortByValue("team"));
+    // TrainerData.sort(sortByValue("team"));
 
     // puts the trainer into the their rooster
-    TrainerData.forEach((trainer) => {
+    data.forEach((trainer: Trainer) => {
       divisions.filter((obj) => {
         if (obj.name.toLocaleLowerCase() === trainer.division)
           obj.array.push(trainer);

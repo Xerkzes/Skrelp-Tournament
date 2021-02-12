@@ -116,7 +116,7 @@
         "imgUrl": "",
         "team": 27,
         "division": "yellow",
-        "wins": 0,
+        "wins": 1,
         "loses": 0,
         "pokemons": [
           { "type": "Bug", "name": "Forretress" },
@@ -593,7 +593,7 @@
         "team": 26,
         "division": "yellow",
         "wins": 0,
-        "loses": 0,
+        "loses": 1,
         "pokemons": [
           { "type": "Bug", "name": "Volbeat" },
           { "type": "Dark", "name": "Sableye" },
