@@ -30,6 +30,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
   return (
     <div>
       <h1 className="header">Here you can generate your Pokemons</h1>
+      <p className="header">(in porgress...)</p>
 
       <div className="generator-count-choice">
         <button>All Types</button>
