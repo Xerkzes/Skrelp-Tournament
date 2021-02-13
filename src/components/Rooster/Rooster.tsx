@@ -80,7 +80,9 @@ export const Rooster: React.FC<RoosterProps> = ({}) => {
               <h2>{obj.name} Division</h2>
               <div className="rooster-teams">
                 {obj.array.map((trainer, idx) => {
-                  return <TrainerLoseWins key={idx} trainer={trainer} />;
+                  return (
+                    <TrainerLoseWins key={idx} trainer={trainer} index={idx} />
+                  );
                 })}
               </div>
             </div>

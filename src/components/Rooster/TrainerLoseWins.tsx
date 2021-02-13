@@ -13,10 +13,12 @@ interface TrainerLoseWinsProps {
       zMove?: boolean | undefined;
     }[];
   };
+  index: number;
 }
 
 export const TrainerLoseWins: React.FC<TrainerLoseWinsProps> = ({
   trainer,
+  index,
 }) => {
   const [wins, setWins] = useState(0);
   const [loses, setLoses] = useState(0);
@@ -41,11 +43,15 @@ export const TrainerLoseWins: React.FC<TrainerLoseWinsProps> = ({
 
   return (
     <div>
-      <div className="rooster-team">
+      <div
+        className={
+          "rooster-team " + (index > 0 ? "rooster-border-top-name" : "")
+        }
+      >
         <p className="rooster-team-name">
           {trainer.team}: {trainer.name}
         </p>
-        <div className="rooster-team-scores">
+        <div className="rooster-team-scores ">
           <p className="rooster-team-games-won">{wins}</p>
           <p className="rooster-team-games-lost">{loses}</p>
         </div>

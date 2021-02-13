@@ -5,7 +5,7 @@
       "team": 1,
       "division": "red",
       "pokemons": [
-        { "type": "Bug", "name": "Wormadam-Trash" },
+        { "type": "Bug", "name": "Yanmega" },
         { "type": "Dark", "name": "Sharpedo-Mega" },
         { "type": "Dragon", "name": "Exeggutor-Alola" },
         { "type": "Electric", "name": "Eelektross" },
@@ -69,7 +69,7 @@
           { "type": "Ground", "name": "Krookodile" },
           { "type": "Ice", "name": "Arctovish" },
           { "type": "Normal", "name": "Stoutland" },
-          { "type": "Poison", "name": "Ariados" },
+          { "type": "Poison", "name": "Dustox" },
           { "type": "Psychic", "name": "Alakazam" },
           { "type": "Rock", "name": "Coalossal" },
           { "type": "Steel", "name": "Klinklang" },
@@ -81,7 +81,7 @@
         "imgUrl": "",
         "team": 28,
         "division": "yellow","pokemons": [
-          { "type": "Bug", "name": "Ribombee" },
+          { "type": "Bug", "name": "Shuckle" },
           { "type": "Dark", "name": "Mandibuzz" },
           { "type": "Dragon", "name": "Flygon" },
           { "type": "Electric", "name": "Golem-Alola" },
@@ -160,7 +160,7 @@
           { "type": "Bug", "name": "Ribombee" },
           { "type": "Dark", "name": "Crawdaunt" },
           { "type": "Dragon", "name": "Guzzlord" },
-          { "type": "Electric", "name": "Luxray" },
+          { "type": "Electric", "name": "Eelektross" },
           { "type": "Fairy", "name": "Grimmsnarl" },
           { "type": "Fighting", "name": "Primeape" },
           { "type": "Fire", "name": "Cinderace" },
@@ -189,7 +189,7 @@
           { "type": "Fairy", "name": "Ribombee" },
           { "type": "Fighting", "name": "Falinks" },
           { "type": "Fire", "name": "Houndoom-Mega" },
-          { "type": "Flying", "name": "Vespiquen" },
+          { "type": "Flying", "name": "Pelipper" },
           { "type": "Ghost", "name": "Cofagrigus" },
           { "type": "Grass", "name": "Ferrothorn" },
           { "type": "Ground", "name": "Excadrill" },
@@ -333,7 +333,7 @@
         "imgUrl": "",
         "team": 4,
         "division": "red","pokemons": [
-          { "type": "Bug", "name": "Parasect" },
+          { "type": "Bug", "name": "Vikavolt" },
           { "type": "Dark", "name": "Sableye" },
           { "type": "Dragon", "name": "Flygon" },
           { "type": "Electric", "name": "Jolteon" },
@@ -374,7 +374,7 @@
           { "type": "Poison", "name": "Nidoking" },
           { "type": "Psychic", "name": "Uxie" },
           { "type": "Rock", "name": "Aggron" },
-          { "type": "Steel", "name": "Wormadam-Trash" },
+          { "type": "Steel", "name": "Heatran" },
           { "type": "Water", "name": "Bruxish" }
         ]
       },
