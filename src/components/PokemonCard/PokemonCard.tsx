@@ -21,9 +21,13 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ data }) => {
     loadPokemons();
   }, []);
 
+  const changeBackgroundColor = () => {
+    setQualification((c) => !c);
+  };
+
   return (
     <div
-      onClick={() => setQualification((c) => !c)}
+      onClick={() => changeBackgroundColor()}
       className={
         "pokemon-card " +
         (qualified ? "pokemon-card-isQualified" : "pokemon-card-notQualified")
