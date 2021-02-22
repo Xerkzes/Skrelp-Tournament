@@ -6451,7 +6451,7 @@
 		"isUber": false,
 		"isForm": true,
 		"types": ["normal", "fighting"],
-		"spriteSuffix": "-piroutte"
+		"spriteSuffix": "-pirouette"
 	},
 	{
 		"dexNr": 649,
@@ -7938,7 +7938,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["psychic", "ghost"],
-		"spriteSuffix": "dawnwings"
+		"spriteSuffix": "-dawnwings"
 	},
 	{
 		"dexNr": 800,
@@ -7947,7 +7947,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["psychic", "steel"],
-		"spriteSuffix": "duskmane"
+		"spriteSuffix": "-duskmane"
 	},
 	{
 		"dexNr": 800,
@@ -7956,7 +7956,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["psychic", "dragon"],
-		"spriteSuffix": "ultra"
+		"spriteSuffix": "-ultra"
 	},
 	{
 		"dexNr": 801,
@@ -8726,7 +8726,7 @@
 		"isUber": false,
 		"isForm": false,
 		"types": ["psychic", "normal"],
-		"spriteSuffix": "f"
+		"spriteSuffix": "-f"
 	},
 	{
 		"dexNr": 877,
@@ -8849,7 +8849,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["fairy", "steel"],
-		"spriteSuffix": "c"
+		"spriteSuffix": "-c"
 	},
 	{
 		"dexNr": 889,
@@ -8866,7 +8866,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["fighting", "steel"],
-		"spriteSuffix": "c"
+		"spriteSuffix": "-c"
 	},
 	{
 		"dexNr": 890,
@@ -8883,7 +8883,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["poison", "dragon"],
-		"spriteSuffix": "eternamax"
+		"spriteSuffix": "-eternamax"
 	},
 	{
 		"dexNr": 891,
@@ -8908,7 +8908,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["fighting", "dark"],
-		"spriteSuffix": "ss-gigantamax"
+		"spriteSuffix": "-ss-gigantamax"
 	},
 	{
 		"dexNr": 892,
@@ -8917,7 +8917,7 @@
 		"isUber": false,
 		"isForm": false,
 		"types": ["fighting", "water"],
-		"spriteSuffix": "rs"
+		"spriteSuffix": "-rs"
 	},
 	{
 		"dexNr": 892,
@@ -8926,7 +8926,7 @@
 		"isUber": false,
 		"isForm": true,
 		"types": ["fighting", "water"],
-		"spriteSuffix": "rs-gigantamax"
+		"spriteSuffix": "-rs-gigantamax"
 	},
 	{
 		"dexNr": 893,
@@ -8983,7 +8983,7 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["psychic", "ice"],
-		"spriteSuffix": "ice"
+		"spriteSuffix": "-ice"
 	},
 	{
 		"dexNr": 898,
@@ -8992,6 +8992,6 @@
 		"isUber": true,
 		"isForm": true,
 		"types": ["psychic", "ghost"],
-		"spriteSuffix": "shadow"
+		"spriteSuffix": "-shadow"
 	}
 ]

@@ -5,3 +5,55 @@
 .hide {
   display: none;
 }
+
+/* --------------------------------------------------------------- 
+Pokemon-Card-Navigation */
+.pokemon-card-navigation {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-card-navigation-button {
+  align-self: center;
+  height: 2rem;
+}
+
+.pokemon-card-navigation-header {
+  margin: 0 1rem;
+}
+
+/* --------------------------------------------------------------- 
+Pokemon-Card */
+.pokemon-card {
+  height: 6rem;
+  width: 6rem;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0.5px;
+}
+
+.pokemon-card-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0;
+  align-self: center;
+}
+
+.pokemon-card-name {
+  width: 100%;
+  margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
+  min-width: unset;
+  text-align: center;
+}
+
+.pokemon-card-isQualified {
+  background-color: lightblue;
+}
+
+.pokemon-card-notQualified {
+  background-color: lightsalmon;
+}
