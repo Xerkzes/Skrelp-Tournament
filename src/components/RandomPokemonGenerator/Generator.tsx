@@ -77,8 +77,6 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
 
   useEffect(() => {
     const changeDisplayOfCards = (index: number) => {
-      console.log("index: " + index);
-
       if (index > 0 && index < pokemonEndDexNr.length) {
         setStartCards(pokemonEndDexNr[index - 1] + 1);
         setEndCards(pokemonEndDexNr[index]);
@@ -122,15 +120,15 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
           <input
             type="checkbox"
             checked={ubers}
-            onClick={() => setUbers(!ubers)}
+            onChange={() => setUbers(!ubers)}
           />
           <label>Ubers</label>
-          <input type="checkbox" checked={nfe} onClick={() => setNFE(!nfe)} />
+          <input type="checkbox" checked={nfe} onChange={() => setNFE(!nfe)} />
           <label>NFEs</label>
           <input
             type="checkbox"
             checked={forms}
-            onClick={() => setForms(!forms)}
+            onChange={() => setForms(!forms)}
           />
           <label>Forms</label>
         </div>
