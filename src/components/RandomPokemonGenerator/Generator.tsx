@@ -8,30 +8,18 @@ import { OneType } from "./TypeCard/OneType";
 
 interface GeneratorProps {}
 
-interface abx {
-  dexNr: number;
-  name: string;
-  isNfe: boolean;
-  isUber: boolean;
-  isForm: boolean;
-  types: string[];
-  spriteSuffix?: string | undefined;
-}
-
 function createImgUrl(pokeData: any) {
   const suffix =
     pokeData.spriteSuffix === undefined ? "" : pokeData.spriteSuffix;
   return "sprites/normal/" + pokeData.dexNr + suffix + ".png";
 }
 
-// todo -> save date into an array
-// todo -> create here a function to change if the pokemon active or not
-// only load 100 Pokemons per page (Pagination)
-
 export const Generator: React.FC<GeneratorProps> = ({}) => {
-  // types
+  // All Types (true) or One Type (false)
   const [typeOption, setTypeOption] = useState<boolean>(true);
+  // choiceBox in "One Type"
   const [pokemonOneType, setPokemonOneType] = useState<string>(() => "Bug");
+  // default Pokemon in "One Type"
   const [randomPokemonOneType, setRandomPokemonOneType] = useState<any>({
     dexNr: 10,
     name: "Examplepie",
@@ -53,7 +41,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
   const [pokemonDexIndex, setPokemonDexIndex] = useState<number>(() => 0);
 
   useEffect(() => {
-    // generate all the cards from a start point to the end point
+    // generate all the cards from a start to end point
     const _cards: any[] = [];
     // based on DexNr
     let index = 0;
@@ -76,12 +64,16 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
     setCards(_cards);
   }, [ubers, nfe, forms, endCards]);
 
+  // update start and end poits of the cards when the user changes Generation
   useEffect(() => {
     const changeDisplayOfCards = (index: number) => {
+      // go one up
       if (index > 0 && index < pokemonEndDexNr.length) {
         setStartCards(pokemonEndDexNr[index - 1] + 1);
         setEndCards(pokemonEndDexNr[index]);
-      } else if (index === 0) {
+      }
+      // go one down
+      else if (index === 0) {
         setStartCards(1);
         setEndCards(pokemonEndDexNr[index]);
       }

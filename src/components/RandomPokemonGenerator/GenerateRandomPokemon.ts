@@ -11,13 +11,12 @@ import PokemonData from "../../helpers/Pokemons.json";
 //     spriteSuffix?: string | undefined;
 //   }
   
-export const createQualified = (pokeData: any, validation: boolean[]
-  ) => {
+export const createQualified = (pokeData: any, validation: boolean[]) => {
     if (pokeData.isUber && !validation[0]) return false;
     if (pokeData.isNfe && !validation[1]) return false;
     if (pokeData.isForm && !validation[2]) return false;
     return true;
-    }
+}
 
 export const generateOneType = (userType: string, validation: boolean[]) => {
     let pokemons: any[] = [];
