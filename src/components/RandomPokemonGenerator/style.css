@@ -1,3 +1,11 @@
+:root {
+  --white: #e8e9ed;
+  --gray: #434257;
+  --blue: #18172c;
+  --green: #00d084;
+  --pink: #ff4b77;
+}
+
 .generator-pokemon-generator {
   text-align: center;
 }
@@ -7,6 +15,37 @@
 }
 
 /* --------------------------------------------------------------- 
+Pokemon-Buttons*/
+.generator-count-choice {
+  margin: 1rem 0;
+}
+
+.pokemon-card-button {
+  cursor: pointer;
+  color: #e8e9ed;
+  padding: 15px;
+  background-color: #18172c;
+  border: none;
+  border-radius: 10px;
+}
+
+.pokemon-button-generate {
+  margin: 1rem 0;
+}
+
+/* --------------------------------------------------------------- 
+Pokemon-Type-Option*/
+.active-type-option {
+  background-color: #00d084;
+}
+
+.pokemon-card-types {
+  font-family: "Segoe UI";
+  font-size: 1rem;
+  color: var(--white);
+}
+
+/* ---------------------------------------------------------------
 Pokemon-Card-Navigation */
 .pokemon-card-navigation {
   margin: 1rem 0;
@@ -16,15 +55,56 @@ Pokemon-Card-Navigation */
 
 .pokemon-card-navigation-button {
   align-self: center;
-  height: 2rem;
 }
 
 .pokemon-card-navigation-header {
   margin: 0 1rem;
+  align-self: center;
+}
+
+/* --------------------------------------------------------------- 
+Pokemon-Type-Card*/
+.generator-generated-pokemons {
+  margin: 2rem 0 1rem 0;
+  display: grid;
+  justify-content: center;
+}
+
+/* Pokemon-One-Type-Card */
+.one-type-container {
+  width: 8rem;
+  height: 10rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.pokemon-generator-type-card {
+}
+.pokemon-generator-sprite {
+  width: 60px;
+  height: 60px;
+  object-fit: none;
+  margin: 0;
+}
+.pokemon-generator-pokeName {
+  margin: 0;
+}
+.pokemon-generator-type {
+  margin: 0;
+}
+
+.one-type-label {
+  margin-right: 0.5rem;
 }
 
 /* --------------------------------------------------------------- 
 Pokemon-Card */
+/* .pokemon-cards-container {
+} */
+
 .pokemon-card {
   height: 6rem;
   width: 6rem;
@@ -52,8 +132,103 @@ Pokemon-Card */
 
 .pokemon-card-isQualified {
   background-color: lightblue;
+  transition: all 0.3s;
 }
 
 .pokemon-card-notQualified {
   background-color: lightsalmon;
+  transition: all 0.3s;
+}
+
+/* --------------------------------------------------------------- 
+Pokemon-Card-Options */
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.checkbox-text {
+  margin-right: 0.5rem;
+}
+
+.switches {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+  width: 95%;
+  margin: 1rem auto;
+  border-radius: 10px;
+  color: var(--white);
+  background: var(--blue);
+}
+
+.switches label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.switches span:last-child {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  background: var(--gray);
+  transition: all 0.3s;
+}
+
+.switches span:last-child::before,
+.switches span:last-child::after {
+  content: "";
+  position: absolute;
+}
+
+.switches span:last-child::before {
+  left: 1px;
+  top: 1px;
+  width: 24px;
+  height: 24px;
+  background: var(--white);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.switches span:last-child::after {
+  top: 50%;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/uncheck-switcher.svg);
+  background-size: 12px 12px;
+}
+
+.switches [type="checkbox"]:checked + label span:last-child {
+  background: var(--green);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::before {
+  transform: translateX(24px);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::after {
+  width: 14px;
+  height: 14px;
+  /*right: auto;*/
+  left: 8px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/checkmark-switcher.svg);
+  background-size: 14px 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .switches li::before {
+    display: none;
+  }
 }

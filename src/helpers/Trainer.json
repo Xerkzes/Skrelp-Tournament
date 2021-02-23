@@ -21,7 +21,7 @@
         { "type": "Poison", "name": "Dustox" },
         { "type": "Psychic", "name": "Bruxish" },
         { "type": "Rock", "name": "Tyranitar" },
-        { "type": "Steel", "name": "Sandslash-Alola" },
+        { "type": "Steel", "name": "Escavalier" },
         { "type": "Water", "name": "Greninja" }
       ]
     },
@@ -410,7 +410,7 @@
         "division": "red","pokemons": [
           { "type": "Bug", "name": "Scolipede" },
           { "type": "Dark", "name": "Grimmsnarl" },
-          { "type": "Dragon", "name": "Drampa" },
+          { "type": "Dragon", "name": "Dragonite" },
           { "type": "Electric", "name": "Vikavolt" },
           { "type": "Fairy", "name": "Shiinotic" },
           { "type": "Fighting", "name": "Machamp" },
