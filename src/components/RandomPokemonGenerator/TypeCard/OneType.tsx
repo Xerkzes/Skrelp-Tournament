@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { PokemonTypeCard } from "./PokemonTypeCard";
 
 interface OneTypeProps {
+  selectedTyp: string;
   setPokemonOneType: React.Dispatch<React.SetStateAction<string>>;
   randomPokemon: any;
 }
 
 export const OneType: React.FC<OneTypeProps> = ({
+  selectedTyp,
   setPokemonOneType,
   randomPokemon,
 }) => {
@@ -14,12 +16,13 @@ export const OneType: React.FC<OneTypeProps> = ({
     <div className="one-type-container">
       <PokemonTypeCard pokemon={randomPokemon} />
       <div>
-        <label htmlFor="cars" className="one-type-label">
+        <label htmlFor="types" className="one-type-label">
           Type:
         </label>
         <select
-          name="cars"
-          id="cars"
+          value={selectedTyp}
+          name="type"
+          id="types"
           onChange={(htmlElement) => {
             setPokemonOneType(htmlElement.target.value);
           }}

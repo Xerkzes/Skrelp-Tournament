@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import typeColors from "../../../helpers/TypeColor";
+
+const typeName = (name: string) => {
+  return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+};
 
 interface PokemonTypeCardProps {
   pokemon: any;
@@ -20,9 +25,35 @@ export const PokemonTypeCard: React.FC<PokemonTypeCardProps> = ({
       <img className="pokemon-generator-sprite" src={imgUrl} />
       <p className="pokemon-generator-pokeName">{pokemon.name}</p>
       <p className="pokemon-generator-type">
-        {pokemon.types.length > 1
-          ? `${pokemon.types[0]} / ${pokemon.types[1]}`
-          : pokemon.types[0]}
+        {pokemon.types.length > 1 ? (
+          <p>
+            <span
+              className="pokemon-generator-one-type-type"
+              style={{
+                backgroundColor: typeColors[pokemon.types[0].toLowerCase()],
+              }}
+            >
+              {typeName(pokemon.types[0])}
+            </span>{" "}
+            <span
+              className="pokemon-generator-one-type-type"
+              style={{
+                backgroundColor: typeColors[pokemon.types[1].toLowerCase()],
+              }}
+            >
+              {typeName(pokemon.types[1])}
+            </span>
+          </p>
+        ) : (
+          <span
+            className="pokemon-generator-one-type-type"
+            style={{
+              backgroundColor: typeColors[pokemon.types[0].toLowerCase()],
+            }}
+          >
+            {typeName(pokemon.types[0])}
+          </span>
+        )}
       </p>
     </div>
   );

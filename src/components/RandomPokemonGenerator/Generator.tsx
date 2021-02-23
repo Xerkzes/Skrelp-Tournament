@@ -34,7 +34,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
   const [pokemonOneType, setPokemonOneType] = useState<string>(() => "Bug");
   const [randomPokemonOneType, setRandomPokemonOneType] = useState<any>({
     dexNr: 10,
-    name: "Caterpie",
+    name: "Examplepie",
     isNfe: true,
     isUber: false,
     isForm: false,
@@ -124,6 +124,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
             <div>All Types</div>
           ) : (
             <OneType
+              selectedTyp={pokemonOneType}
               setPokemonOneType={setPokemonOneType}
               randomPokemon={randomPokemonOneType}
             />
@@ -196,7 +197,10 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
         <div className={"pokemon-cards-container " + (showCards ? "" : "hide")}>
           <div className="pokemon-card-navigation">
             <button
-              className="pokemon-card-navigation-button pokemon-card-button"
+              className={
+                "pokemon-card-navigation-button pokemon-card-button" +
+                (pokemonDexIndex === 0 ? " not-visible" : "")
+              }
               onClick={() =>
                 pokemonDexIndex > 0
                   ? setPokemonDexIndex(pokemonDexIndex - 1)
@@ -210,7 +214,12 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
               Generation {pokemonDexIndex + 1}
             </h2>
             <button
-              className="pokemon-card-navigation-button pokemon-card-button"
+              className={
+                "pokemon-card-navigation-button pokemon-card-button" +
+                (pokemonDexIndex === pokemonEndDexNr.length - 1
+                  ? " not-visible"
+                  : "")
+              }
               onClick={() =>
                 pokemonDexIndex < pokemonEndDexNr.length - 1
                   ? setPokemonDexIndex(pokemonDexIndex + 1)

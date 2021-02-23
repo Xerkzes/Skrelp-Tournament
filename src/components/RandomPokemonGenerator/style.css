@@ -14,6 +14,10 @@
   display: none;
 }
 
+.not-visible {
+  visibility: hidden;
+}
+
 /* --------------------------------------------------------------- 
 Pokemon-Buttons*/
 .generator-count-choice {
@@ -72,7 +76,7 @@ Pokemon-Type-Card*/
 
 /* Pokemon-One-Type-Card */
 .one-type-container {
-  width: 8rem;
+  width: 10rem;
   height: 10rem;
   margin: 1rem 0;
   padding: 1rem;
@@ -80,6 +84,7 @@ Pokemon-Type-Card*/
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-radius: 20px;
 }
 .pokemon-generator-type-card {
 }
@@ -95,9 +100,22 @@ Pokemon-Type-Card*/
 .pokemon-generator-type {
   margin: 0;
 }
+.pokemon-generator-type > * {
+  margin: 0;
+}
 
 .one-type-label {
   margin-right: 0.5rem;
+}
+
+.pokemon-generator-one-type-type {
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.00938em;
+  padding: 0.1rem 0.5rem;
 }
 
 /* --------------------------------------------------------------- 
@@ -156,10 +174,7 @@ li {
 }
 
 .switches {
-  display: flex;
-  justify-content: space-evenly;
   max-width: 500px;
-  width: 95%;
   margin: 1rem auto;
   border-radius: 10px;
   color: var(--white);
@@ -230,5 +245,12 @@ li {
 @media screen and (max-width: 600px) {
   .switches li::before {
     display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .switches {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
