@@ -13,12 +13,12 @@ interface PokemonProps {
 
 export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
   const [imgUrl, setImgUrl] = useState<string>("");
-  const [hp, setHP] = useState<number | undefined>(0);
-  const [atk, setAtk] = useState<number | undefined>(0);
-  const [def, setDef] = useState<number | undefined>(0);
-  const [spA, setSpA] = useState<number | undefined>(0);
-  const [spD, setSpD] = useState<number | undefined>(0);
-  const [spe, setSpe] = useState<number | undefined>(0);
+  // const [hp, setHP] = useState<number | undefined>(0);
+  // const [atk, setAtk] = useState<number | undefined>(0);
+  // const [def, setDef] = useState<number | undefined>(0);
+  // const [spA, setSpA] = useState<number | undefined>(0);
+  // const [spD, setSpD] = useState<number | undefined>(0);
+  // const [spe, setSpe] = useState<number | undefined>(0);
 
   useEffect(() => {
     async function loadPokemons() {
@@ -28,12 +28,6 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
           return data;
         }
       });
-      // get data from API
-      // const fetchDataUrl =
-      //   "https://pokeapi.co/api/v2/pokemon/" + pokemonData[0].dexNr;
-      // const response = await fetch(fetchDataUrl);
-      // const data = await response.json();
-
       // set Sprite Url
       const suffix =
         pokemonData[0].spriteSuffix === undefined
@@ -41,6 +35,11 @@ export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
           : pokemonData[0].spriteSuffix;
       setImgUrl("sprites/normal/" + pokemonData[0].dexNr + suffix + ".png");
 
+      // get data from API
+      // const fetchDataUrl =
+      //   "https://pokeapi.co/api/v2/pokemon/" + pokemonData[0].dexNr;
+      // const response = await fetch(fetchDataUrl);
+      // const data = await response.json();
       // try {
       //   setHP(data.stats[0].base_stat);
       //   setAtk(data.stats[1].base_stat);

@@ -1,8 +1,38 @@
 import PokemonData from "../../helpers/Pokemons.json";
 
-export const generateOneType = (type: string) => {
-    let pokemon: string;
+// Peppo Sad .(
+// interface Pokemon {
+//     dexNr: number;
+//     name: string;
+//     isNfe: boolean;
+//     isUber: boolean;
+//     isForm: boolean;
+//     types: (string)[];
+//     spriteSuffix?: string | undefined;
+//   }
+  
+export const createQualified = (pokeData: any, validation: boolean[]
+  ) => {
+    if (pokeData.isUber && !validation[0]) return false;
+    if (pokeData.isNfe && !validation[1]) return false;
+    if (pokeData.isForm && !validation[2]) return false;
+    return true;
+    }
 
+export const generateOneType = (userType: string, validation: boolean[]) => {
+    let pokemons: any[] = [];
 
-    return pokemon;
+    // filter pokemons
+    PokemonData.forEach((pokemon) => {
+        pokemon.types.forEach(type => {
+            if (type.toLowerCase() == userType.toLowerCase() && createQualified(pokemon, validation)) {
+                pokemons.push(pokemon);
+            }
+        })
+    })
+
+    // picks a random pokemon from the filtered list
+    const randomPokemon = pokemons[Math.floor(Math.random() * pokemons.length)];
+
+    return randomPokemon;
 }

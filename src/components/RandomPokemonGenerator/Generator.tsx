@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
+import { generateOneType, createQualified } from "./GenerateRandomPokemon";
 import PokemonData from "../../helpers/Pokemons.json";
 import { PokemonCard } from "./PokemonCard";
 import { PokeClass } from "./PokeClass";
@@ -23,18 +24,6 @@ function createImgUrl(pokeData: any) {
   return "sprites/normal/" + pokeData.dexNr + suffix + ".png";
 }
 
-function createQualified(
-  pokeData: any,
-  ubers: boolean,
-  nfe: boolean,
-  forms: boolean
-) {
-  if (!ubers && pokeData.isUber) return false;
-  if (!nfe && pokeData.isNfe) return false;
-  if (!forms && pokeData.isForm) return false;
-  return true;
-}
-
 // todo -> save date into an array
 // todo -> create here a function to change if the pokemon active or not
 // only load 100 Pokemons per page (Pagination)
@@ -42,6 +31,15 @@ function createQualified(
 export const Generator: React.FC<GeneratorProps> = ({}) => {
   // types
   const [typeOption, setTypeOption] = useState<boolean>(true);
+  const [pokemonOneType, setPokemonOneType] = useState<string>(() => "Bug");
+  const [randomPokemonOneType, setRandomPokemonOneType] = useState<any>({
+    dexNr: 10,
+    name: "Caterpie",
+    isNfe: true,
+    isUber: false,
+    isForm: false,
+    types: ["bug"],
+  });
   // card options
   const [showCards, setShowCards] = useState<boolean>(false);
   const [ubers, setUbers] = useState<boolean>(() => true);
@@ -67,7 +65,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
         let tempClass = new PokeClass(
           imgString,
           PokemonData[index].name,
-          createQualified(PokemonData[index], ubers, nfe, forms)
+          createQualified(PokemonData[index], [ubers, nfe, forms])
         );
 
         _cards.push(tempClass);
@@ -122,11 +120,28 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
 
         {/* Random Pokemon */}
         <div className="generator-generated-pokemons">
-          {typeOption ? <div>All Types</div> : <OneType />}
+          {typeOption ? (
+            <div>All Types</div>
+          ) : (
+            <OneType
+              setPokemonOneType={setPokemonOneType}
+              randomPokemon={randomPokemonOneType}
+            />
+          )}
         </div>
 
         {/* starts generating pokemon  */}
-        <button className="pokemon-card-button pokemon-button-generate">
+        <button
+          className="pokemon-card-button pokemon-button-generate"
+          onClick={
+            typeOption
+              ? () => console.log("nothing")
+              : () =>
+                  setRandomPokemonOneType(
+                    generateOneType(pokemonOneType, [ubers, nfe, forms])
+                  )
+          }
+        >
           Generate
         </button>
 

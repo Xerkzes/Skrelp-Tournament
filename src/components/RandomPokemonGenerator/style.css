@@ -86,7 +86,7 @@ Pokemon-Type-Card*/
 .pokemon-generator-sprite {
   width: 60px;
   height: 60px;
-  object-fit: none;
+  object-fit: contain;
   margin: 0;
 }
 .pokemon-generator-pokeName {
