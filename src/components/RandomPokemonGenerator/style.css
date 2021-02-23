@@ -44,9 +44,13 @@ Pokemon-Type-Option*/
 }
 
 .pokemon-card-types {
-  font-family: "Segoe UI";
   font-size: 1rem;
-  color: var(--white);
+}
+.pokemon-card-types:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.pokemon-card-types:last-child {
+  border-radius: 0 20px 20px 0;
 }
 
 /* ---------------------------------------------------------------
