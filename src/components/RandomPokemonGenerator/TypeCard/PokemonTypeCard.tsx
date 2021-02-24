@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import typeColors from "../../../helpers/TypeColor";
-
-const typeName = (name: string) => {
-  return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
-};
+import { craeteTypeName } from "../../../helpers/Utility";
 
 interface PokemonTypeCardProps {
   pokemon: any;
@@ -33,7 +30,7 @@ export const PokemonTypeCard: React.FC<PokemonTypeCardProps> = ({
                 backgroundColor: typeColors[pokemon.types[0].toLowerCase()],
               }}
             >
-              {typeName(pokemon.types[0])}
+              {craeteTypeName(pokemon.types[0])}
             </span>{" "}
             <span
               className="pokemon-generator-one-type-type"
@@ -41,7 +38,7 @@ export const PokemonTypeCard: React.FC<PokemonTypeCardProps> = ({
                 backgroundColor: typeColors[pokemon.types[1].toLowerCase()],
               }}
             >
-              {typeName(pokemon.types[1])}
+              {craeteTypeName(pokemon.types[1])}
             </span>
           </p>
         ) : (
@@ -51,7 +48,7 @@ export const PokemonTypeCard: React.FC<PokemonTypeCardProps> = ({
               backgroundColor: typeColors[pokemon.types[0].toLowerCase()],
             }}
           >
-            {typeName(pokemon.types[0])}
+            {craeteTypeName(pokemon.types[0])}
           </span>
         )}
       </p>

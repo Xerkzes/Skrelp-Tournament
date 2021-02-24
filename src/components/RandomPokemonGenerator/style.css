@@ -35,6 +35,8 @@ Pokemon-Buttons*/
 
 .pokemon-button-generate {
   margin: 1rem 0;
+  font-size: 2rem;
+  border-radius: 20px;
 }
 
 /* --------------------------------------------------------------- 
@@ -78,11 +80,23 @@ Pokemon-Type-Card*/
   justify-content: center;
 }
 
+/* Pokemon-All-Type-Card */
+.all-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.all-type-type {
+  padding: 0.2rem 0;
+  color: white;
+}
+
 /* Pokemon-One-Type-Card */
-.one-type-container {
+.one-type-container,
+.all-type-card {
   width: 10rem;
   height: 13rem;
-  margin: 1rem 0;
   padding: 1rem;
   border: 2px solid black;
   display: flex;
@@ -92,8 +106,8 @@ Pokemon-Type-Card*/
   background-color: var(--blue);
   color: var(--white);
 }
-.pokemon-generator-type-card {
-}
+/* .pokemon-generator-type-card {
+} */
 .pokemon-generator-sprite {
   width: 60px;
   height: 60px;

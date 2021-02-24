@@ -10,6 +10,26 @@ import PokemonData from "../../helpers/Pokemons.json";
 //     types: (string)[];
 //     spriteSuffix?: string | undefined;
 //   }
+
+const containsObject = (obj: any, list: any) => {
+    var i;
+    for (i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+const createPokemonForAllType = (pokemonData: any, cardType: string) => {
+    return (
+        {
+            "pokemon": pokemonData,
+            "type": cardType
+        }
+    )
+}
   
 export const createQualified = (pokeData: any, validation: boolean[]) => {
     if (pokeData.isUber && !validation[0]) return false;
@@ -34,4 +54,25 @@ export const generateOneType = (userType: string, validation: boolean[]) => {
     const randomPokemon = pokemons[Math.floor(Math.random() * pokemons.length)];
 
     return randomPokemon;
+}
+
+export const generateAllTypes = (validation: boolean[]) => {
+    let randomPokemons: any[] = [];
+    let types: string[] = ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+
+    // filter pokemons
+    for (let type of types) {
+        let newPokemon = false;
+        // generates Pokemon until a pokemon is found that is not already in the list
+        while (!newPokemon) {
+            let generatedPokemon = generateOneType(type, validation);
+
+            if (!containsObject(generatedPokemon, randomPokemons)) {
+                randomPokemons.push(createPokemonForAllType(generatedPokemon, type));
+                newPokemon = true;
+            }
+        }
+    }
+
+    return randomPokemons;
 }
