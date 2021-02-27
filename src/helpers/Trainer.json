@@ -211,7 +211,7 @@
           { "type": "Bug", "name": "Vespiquen" },
           { "type": "Dark", "name": "Malamar" },
           { "type": "Dragon", "name": "Dracozolt" },
-          { "type": "Electric", "name": "Plusle" },
+          { "type": "Electric", "name": "Xurkitree" },
           { "type": "Fairy", "name": "Mawile-Mega" },
           { "type": "Fighting", "name": "Machamp" },
           { "type": "Fire", "name": "Moltres" },
@@ -349,7 +349,7 @@
           { "type": "Poison", "name": "Skuntank" },
           { "type": "Psychic", "name": "Wobbuffet" },
           { "type": "Rock", "name": "Stonjourner" },
-          { "type": "Steel", "name": "Mawile" },
+          { "type": "Steel", "name": "Forretress" },
           { "type": "Water", "name": "Samurott" }
         ]
       },

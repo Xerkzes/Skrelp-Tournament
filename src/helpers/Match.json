@@ -40,19 +40,19 @@
     {
         "header": "Week3: (Feb 22-March 01)",
         "matches": [
-            {"name1": "RhydonMyDeek",           "name2": "vaugsy17",                "winner": ""},
-            {"name1": "martypyds",              "name2": "mcguineeplasto",          "winner": ""},
-            {"name1": "X3rkzes",                "name2": "pokedoh",                 "winner": ""},
-            {"name1": "r3z3n15",                "name2": "bumper09",                "winner": ""},
-            {"name1": "FatherGung",             "name2": "vinomatic101",            "winner": ""},
+            {"name1": "RhydonMyDeek",           "name2": "vaugsy17",                "winner": "RhydonMyDeek"},
+            {"name1": "martypyds",              "name2": "mcguineeplasto",          "winner": "mcguineeplasto"},
+            {"name1": "X3rkzes",                "name2": "pokedoh",                 "winner": "X3rkzes"},
+            {"name1": "r3z3n15",                "name2": "bumper09",                "winner": "r3z3n15"},
+            {"name1": "FatherGung",             "name2": "vinomatic101",            "winner": "vinomatic101"},
             {"name1": "Mannat",                 "name2": "daddybeefcakes123",       "winner": ""},
-            {"name1": "runanbun_",              "name2": "QuestionableSpecimen",    "winner": ""},
+            {"name1": "runanbun_",              "name2": "QuestionableSpecimen",    "winner": "runanbun_"},
             {"name1": "alienx3",                "name2": "ElementalTem",            "winner": ""},
-            {"name1": "PapierJoe",              "name2": "rossboss00",              "winner": ""},
+            {"name1": "PapierJoe",              "name2": "rossboss00",              "winner": "rossboss00"},
             {"name1": "lefty8511",              "name2": "xxsirsavage13xx",         "winner": ""},
             {"name1": "TheLoooon",              "name2": "TheTired",                "winner": ""},
             {"name1": "Professor_Mad_Lad",      "name2": "Liljaka",                 "winner": ""},
-            {"name1": "Wufn1k",                 "name2": "jmurphy725",              "winner": ""},
+            {"name1": "Wufn1k",                 "name2": "jmurphy725",              "winner": "jmurphy725"},
             {"name1": "099percentbeast",        "name2": "ajstyles",                "winner": ""}
         ]
     }
