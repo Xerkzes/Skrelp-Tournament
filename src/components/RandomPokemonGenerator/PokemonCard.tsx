@@ -4,9 +4,13 @@ import "./style.css";
 
 interface PokemonCardProps {
   props: PokeClass;
+  imageLoad: () => void;
 }
 
-export const PokemonCard: React.FC<PokemonCardProps> = ({ props }) => {
+export const PokemonCard: React.FC<PokemonCardProps> = ({
+  props,
+  imageLoad,
+}) => {
   const [backgroundColor, setBackgroundColor] = useState<boolean>(
     () => props.qualified
   );
@@ -28,6 +32,7 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ props }) => {
         className="pokemon-card-img"
         src={props.imgUrl}
         alt={props.pokemoName}
+        onLoad={imageLoad}
       />
       <p className="pokemon-card-name">{props.pokemoName}</p>
     </div>

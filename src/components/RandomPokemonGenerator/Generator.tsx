@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./style.css";
 import {
   generateOneType,
@@ -43,7 +43,15 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
   const pokemonEndDexNr: number[] = [151, 251, 386, 493, 649, 721, 809, 898];
   const [pokemonDexIndex, setPokemonDexIndex] = useState<number>(() => 0);
   // show cards when fully loaded
-  const [showPokeCards, setShowPokeCards] = useState<boolean>(() => true);
+  const [showPokeCards, setShowPokeCards] = useState<boolean>(false);
+  const cardsThatAreLoaded = useRef<number>(0);
+  const imageLoaded = () => {
+    cardsThatAreLoaded.current += 1;
+    if (cardsThatAreLoaded.current == cards.length) {
+      setShowPokeCards(true);
+      cardsThatAreLoaded.current = 0;
+    }
+  };
 
   useEffect(() => {
     // generate all the cards from a start to end point
@@ -57,6 +65,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
         let imgString = createImgUrl(PokemonData[index]);
         let tempClass = new PokeClass(
           imgString,
+          false,
           PokemonData[index].name,
           createQualified(PokemonData[index], [ubers, nfe, forms])
         );
@@ -66,6 +75,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
 
       index++;
     }
+
     setCards(_cards);
   }, [ubers, nfe, forms, endCards]);
 
@@ -74,6 +84,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
     const changeDisplayOfCards = (index: number) => {
       // show loader
       setShowPokeCards(false);
+
       // go one up
       if (index > 0 && index < pokemonEndDexNr.length) {
         setStartCards(pokemonEndDexNr[index - 1] + 1);
@@ -86,9 +97,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
       }
     };
 
-    setTimeout(changeDisplayOfCards, 1000, pokemonDexIndex);
-    // show cards
-    setShowPokeCards(true);
+    changeDisplayOfCards(pokemonDexIndex);
   }, [pokemonDexIndex]);
 
   return (
@@ -232,14 +241,32 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
               {">"}
             </button>
           </div>
-          <div>
+
+          {/* <div>
             {showPokeCards ? (
-              <div className="pokemon-cards-loader"></div>
-            ) : (
               cards.map((card: PokeClass, idx: number) => {
-                return <PokemonCard key={idx} props={card} />;
+                return (
+                  <PokemonCard key={idx} props={card} imageLoad={imageLoaded} />
+                );
               })
+            ) : (
+              <div className="pokemon-cards-loader"></div>
             )}
+          </div> */}
+
+          <div>
+            <div
+              className="pokemon-cards-loader"
+              style={{ display: showPokeCards ? "none" : "block" }}
+            ></div>
+
+            <div style={{ display: showPokeCards ? "block" : "none" }}>
+              {cards.map((card: PokeClass, idx: number) => {
+                return (
+                  <PokemonCard key={idx} props={card} imageLoad={imageLoaded} />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
