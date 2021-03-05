@@ -42,29 +42,39 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
   const [endCards, setEndCards] = useState<number>(() => 151);
   const pokemonEndDexNr: number[] = [151, 251, 386, 493, 649, 721, 809, 898];
   const [pokemonDexIndex, setPokemonDexIndex] = useState<number>(() => 0);
+  // show cards when fully loaded
+  const [loadCards, setLoadCards] = useState<boolean>(() => true);
 
   useEffect(() => {
-    // generate all the cards from a start to end point
-    const _cards: any[] = [];
-    // based on DexNr
-    let index = 0;
-    while (true) {
-      if (!PokemonData[index] || PokemonData[index].dexNr > endCards) break;
+    const createCard = () => {
+      // generate cards
+      setLoadCards(false);
+      // generate all the cards from a start to end point
+      const _cards: any[] = [];
+      // based on DexNr
+      let index = 0;
+      while (true) {
+        if (!PokemonData[index] || PokemonData[index].dexNr > endCards) break;
 
-      if (PokemonData[index].dexNr >= startCards) {
-        let imgString = createImgUrl(PokemonData[index]);
-        let tempClass = new PokeClass(
-          imgString,
-          PokemonData[index].name,
-          createQualified(PokemonData[index], [ubers, nfe, forms])
-        );
+        if (PokemonData[index].dexNr >= startCards) {
+          let imgString = createImgUrl(PokemonData[index]);
+          let tempClass = new PokeClass(
+            imgString,
+            PokemonData[index].name,
+            createQualified(PokemonData[index], [ubers, nfe, forms])
+          );
 
-        _cards.push(tempClass);
+          _cards.push(tempClass);
+        }
+
+        index++;
       }
+      setCards(_cards);
+    };
 
-      index++;
-    }
-    setCards(_cards);
+    setTimeout(createCard, 500);
+    // display Cards
+    setLoadCards(true);
   }, [ubers, nfe, forms, endCards]);
 
   // update start and end poits of the cards when the user changes Generation
@@ -225,9 +235,13 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
             </button>
           </div>
           <div>
-            {cards.map((card: PokeClass, idx: number) => {
-              return <PokemonCard key={idx} props={card} />;
-            })}
+            {loadCards ? (
+              <div className="pokemon-cards-loader"></div>
+            ) : (
+              cards.map((card: PokeClass, idx: number) => {
+                return <PokemonCard key={idx} props={card} />;
+              })
+            )}
           </div>
         </div>
       </div>
