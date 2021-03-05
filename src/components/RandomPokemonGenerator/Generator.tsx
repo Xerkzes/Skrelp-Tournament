@@ -32,7 +32,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
     oneTypePokemonExample
   );
   // card options
-  const [showCards, setShowCards] = useState<boolean>(false);
+  const [showTypeCards, setShowTypeCards] = useState<boolean>(false);
   const [ubers, setUbers] = useState<boolean>(() => true);
   const [nfe, setNFE] = useState<boolean>(() => true);
   const [forms, setForms] = useState<boolean>(() => false);
@@ -43,43 +43,37 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
   const pokemonEndDexNr: number[] = [151, 251, 386, 493, 649, 721, 809, 898];
   const [pokemonDexIndex, setPokemonDexIndex] = useState<number>(() => 0);
   // show cards when fully loaded
-  const [loadCards, setLoadCards] = useState<boolean>(() => true);
+  const [showPokeCards, setShowPokeCards] = useState<boolean>(() => true);
 
   useEffect(() => {
-    const createCard = () => {
-      // generate cards
-      setLoadCards(false);
-      // generate all the cards from a start to end point
-      const _cards: any[] = [];
-      // based on DexNr
-      let index = 0;
-      while (true) {
-        if (!PokemonData[index] || PokemonData[index].dexNr > endCards) break;
+    // generate all the cards from a start to end point
+    const _cards: any[] = [];
+    // based on DexNr
+    let index = 0;
+    while (true) {
+      if (!PokemonData[index] || PokemonData[index].dexNr > endCards) break;
 
-        if (PokemonData[index].dexNr >= startCards) {
-          let imgString = createImgUrl(PokemonData[index]);
-          let tempClass = new PokeClass(
-            imgString,
-            PokemonData[index].name,
-            createQualified(PokemonData[index], [ubers, nfe, forms])
-          );
+      if (PokemonData[index].dexNr >= startCards) {
+        let imgString = createImgUrl(PokemonData[index]);
+        let tempClass = new PokeClass(
+          imgString,
+          PokemonData[index].name,
+          createQualified(PokemonData[index], [ubers, nfe, forms])
+        );
 
-          _cards.push(tempClass);
-        }
-
-        index++;
+        _cards.push(tempClass);
       }
-      setCards(_cards);
-    };
 
-    setTimeout(createCard, 500);
-    // display Cards
-    setLoadCards(true);
+      index++;
+    }
+    setCards(_cards);
   }, [ubers, nfe, forms, endCards]);
 
   // update start and end poits of the cards when the user changes Generation
   useEffect(() => {
     const changeDisplayOfCards = (index: number) => {
+      // show loader
+      setShowPokeCards(false);
       // go one up
       if (index > 0 && index < pokemonEndDexNr.length) {
         setStartCards(pokemonEndDexNr[index - 1] + 1);
@@ -92,7 +86,9 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
       }
     };
 
-    changeDisplayOfCards(pokemonDexIndex);
+    setTimeout(changeDisplayOfCards, 1000, pokemonDexIndex);
+    // show cards
+    setShowPokeCards(true);
   }, [pokemonDexIndex]);
 
   return (
@@ -193,12 +189,14 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
         {/* pokemon cards */}
         <button
           className="pokemon-card-button"
-          onClick={() => setShowCards(() => !showCards)}
+          onClick={() => setShowTypeCards(() => !showTypeCards)}
         >
           Show Cards
         </button>
 
-        <div className={"pokemon-cards-container " + (showCards ? "" : "hide")}>
+        <div
+          className={"pokemon-cards-container " + (showTypeCards ? "" : "hide")}
+        >
           <div className="pokemon-card-navigation">
             <button
               className={
@@ -235,7 +233,7 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
             </button>
           </div>
           <div>
-            {loadCards ? (
+            {showPokeCards ? (
               <div className="pokemon-cards-loader"></div>
             ) : (
               cards.map((card: PokeClass, idx: number) => {
