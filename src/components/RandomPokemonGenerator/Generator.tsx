@@ -242,18 +242,6 @@ export const Generator: React.FC<GeneratorProps> = ({}) => {
             </button>
           </div>
 
-          {/* <div>
-            {showPokeCards ? (
-              cards.map((card: PokeClass, idx: number) => {
-                return (
-                  <PokemonCard key={idx} props={card} imageLoad={imageLoaded} />
-                );
-              })
-            ) : (
-              <div className="pokemon-cards-loader"></div>
-            )}
-          </div> */}
-
           <div>
             <div
               className="pokemon-cards-loader"
