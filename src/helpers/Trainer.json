@@ -14,7 +14,7 @@
         { "type": "Fire", "name": "Blaziken" },
         { "type": "Flying", "name": "Corviknight" },
         { "type": "Ghost", "name": "Gengar" },
-        { "type": "Grass", "name": "Flapple" },
+        { "type": "Grass", "name": "Chesnaught" },
         { "type": "Ground", "name": "Garchomp" },
         { "type": "Ice", "name": "Walrein" },
         { "type": "Normal", "name": "Swellow" },
@@ -29,7 +29,8 @@
         "name": "runanbun_",
         "imgUrl": "",
         "team": 12,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Yanmega" },
           { "type": "Dark", "name": "Hydreigon" },
           { "type": "Dragon", "name": "Dragapult" },
@@ -80,9 +81,10 @@
         "name": "ajstyles",
         "imgUrl": "",
         "team": 28,
-        "division": "yellow","pokemons": [
-          { "type": "Bug", "name": "Shuckle" },
-          { "type": "Dark", "name": "Mandibuzz" },
+        "division": "yellow",
+        "pokemons": [
+          { "type": "Bug", "name": "Butterfree" },
+          { "type": "Dark", "name": "Umbreon" },
           { "type": "Dragon", "name": "Flygon" },
           { "type": "Electric", "name": "Golem-Alola" },
           { "type": "Fairy", "name": "Tapu-Bulu" },
@@ -131,7 +133,8 @@
         "name": "Mannat",
         "imgUrl": "",
         "team": 9,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Armaldo" },
           { "type": "Dark", "name": "Houndoom" },
           { "type": "Dragon", "name": "Guzzlord" },
@@ -140,7 +143,7 @@
           { "type": "Fighting", "name": "Kommo-o" },
           { "type": "Fire", "name": "Delphox" },
           { "type": "Flying", "name": "Rotom-Fan" },
-          { "type": "Ghost", "name": "Spiritomb" },
+          { "type": "Ghost", "name": "Cursola" },
           { "type": "Grass", "name": "Sceptile-Mega" },
           { "type": "Ground", "name": "Seismitoad" },
           { "type": "Ice", "name": "Crabominable" },
@@ -156,7 +159,8 @@
         "name": "FatherGung",
         "imgUrl": "",
         "team": 8,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Ribombee" },
           { "type": "Dark", "name": "Crawdaunt" },
           { "type": "Dragon", "name": "Guzzlord" },
@@ -181,12 +185,13 @@
         "name": "r3z3n15",
         "imgUrl": "",
         "team": 5,
-        "division": "red","pokemons": [
+        "division": "red",
+        "pokemons": [
           { "type": "Bug", "name": "Vikavolt" },
           { "type": "Dark", "name": "Morpeko" },
           { "type": "Dragon", "name": "Hydreigon" },
           { "type": "Electric", "name": "Raichu" },
-          { "type": "Fairy", "name": "Ribombee" },
+          { "type": "Fairy", "name": "Magearna" },
           { "type": "Fighting", "name": "Falinks" },
           { "type": "Fire", "name": "Houndoom-Mega" },
           { "type": "Flying", "name": "Pelipper" },
@@ -221,7 +226,7 @@
           { "type": "Ground", "name": "Golem" },
           { "type": "Ice", "name": "Glalie" },
           { "type": "Normal", "name": "Dodrio" },
-          { "type": "Poison", "name": "Ariados" },
+          { "type": "Poison", "name": "Swalot" },
           { "type": "Psychic", "name": "Medicham" },
           { "type": "Rock", "name": "Aggron" },
           { "type": "Steel", "name": "Magearna" },
@@ -232,7 +237,8 @@
         "name": "vinomatic101",
         "imgUrl": "",
         "team": 11,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Forretress" },
           { "type": "Dark", "name": "Mandibuzz" },
           { "type": "Dragon", "name": "Noivern" },
@@ -257,7 +263,8 @@
         "name": "pokedoh",
         "imgUrl": "",
         "team": 10,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Armaldo" },
           { "type": "Dark", "name": "Weavile" },
           { "type": "Dragon", "name": "Dragonite" },
@@ -282,12 +289,13 @@
         "name": "QuestionableSpecimen",
         "imgUrl": "",
         "team": 14,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Shuckle" },
           { "type": "Dark", "name": "Zoroark" },
           { "type": "Dragon", "name": "Haxorus" },
           { "type": "Electric", "name": "Emolga" },
-          { "type": "Fairy", "name": "Granbull" },
+          { "type": "Fairy", "name": "Gardevoir" },
           { "type": "Fighting", "name": "Medicham-Mega" },
           { "type": "Fire", "name": "Emboar" },
           { "type": "Flying", "name": "Xatu" },
@@ -307,7 +315,8 @@
         "name": "bumper09",
         "imgUrl": "",
         "team": 7,
-        "division": "red","pokemons": [
+        "division": "red",
+        "pokemons": [
           { "type": "Bug", "name": "Vivillon" },
           { "type": "Dark", "name": "Shiftry" },
           { "type": "Dragon", "name": "Garchomp-Mega" },
@@ -332,7 +341,8 @@
         "name": "vaugsy17",
         "imgUrl": "",
         "team": 4,
-        "division": "red","pokemons": [
+        "division": "red",
+        "pokemons": [
           { "type": "Bug", "name": "Vikavolt" },
           { "type": "Dark", "name": "Sableye" },
           { "type": "Dragon", "name": "Flygon" },
@@ -357,7 +367,8 @@
         "name": "daddybeefcakes123",
         "imgUrl": "",
         "team": 13,
-        "division": "blue","pokemons": [
+        "division": "blue",
+        "pokemons": [
           { "type": "Bug", "name": "Orbeetle" },
           { "type": "Dark", "name": "Shiftry" },
           { "type": "Dragon", "name": "Dragapult" },
@@ -370,19 +381,20 @@
           { "type": "Grass", "name": "Parasect" },
           { "type": "Ground", "name": "Swampert" },
           { "type": "Ice", "name": "Kyurem" },
-          { "type": "Normal", "name": "Swallow" },
+          { "type": "Normal", "name": "Swellow" },
           { "type": "Poison", "name": "Nidoking" },
           { "type": "Psychic", "name": "Uxie" },
           { "type": "Rock", "name": "Aggron" },
           { "type": "Steel", "name": "Heatran" },
-          { "type": "Water", "name": "Bruxish" }
+          { "type": "Water", "name": "Araquanid" }
         ]
       },
       {
         "name": "lefty8511",
         "imgUrl": "",
         "team": 17,
-        "division": "green","pokemons": [
+        "division": "green",
+        "pokemons": [
           { "type": "Bug", "name": "Ninjask" },
           { "type": "Dark", "name": "Scrafty" },
           { "type": "Dragon", "name": "Turtonator" },
@@ -407,7 +419,8 @@
         "name": "X3rkzes",
         "imgUrl": "",
         "team": 3,
-        "division": "red","pokemons": [
+        "division": "red",
+        "pokemons": [
           { "type": "Bug", "name": "Scolipede" },
           { "type": "Dark", "name": "Grimmsnarl" },
           { "type": "Dragon", "name": "Dragonite" },
@@ -432,13 +445,14 @@
         "name": "ElementalTem",
         "imgUrl": "",
         "team": 18,
-        "division": "green","pokemons": [
+        "division": "green",
+        "pokemons": [
           { "type": "Bug", "name": "Vespiquen" },
           { "type": "Dark", "name": "Obstagoon" },
           { "type": "Dragon", "name": "Goodra" },
           { "type": "Electric", "name": "Jolteon" },
           { "type": "Fairy", "name": "Wigglytuff" },
-          { "type": "Fighting", "name": "Lucario" },
+          { "type": "Fighting", "name": "Breloom" },
           { "type": "Fire", "name": "Infernape" },
           { "type": "Flying", "name": "Dragonite" },
           { "type": "Ghost", "name": "Sableye-Mega" },
@@ -457,7 +471,8 @@
         "name": "xxsirsavage13xx",
         "imgUrl": "",
         "team": 24,
-        "division": "yellow","pokemons": [
+        "division": "yellow",
+        "pokemons": [
           { "type": "Bug", "name": "Forretress" },
           { "type": "Dark", "name": "Greninja" },
           { "type": "Dragon", "name": "Dragonite" },
@@ -482,7 +497,8 @@
         "name": "mcguineeplasto",
         "imgUrl": "",
         "team": 6,
-        "division": "red","pokemons": [
+        "division": "red",
+        "pokemons": [
           { "type": "Bug", "name": "Ninjask" },
           { "type": "Dark", "name": "Honchkrow" },
           { "type": "Dragon", "name": "Noivern" },
@@ -600,7 +616,7 @@
           { "type": "Ground", "name": "Runerigus" },
           { "type": "Ice", "name": "Frosmoth" },
           { "type": "Normal", "name": "Fearow" },
-          { "type": "Poison", "name": "Beedrill" },
+          { "type": "Poison", "name": "Beedrill-Mega" },
           { "type": "Psychic", "name": "Medicham" },
           { "type": "Rock", "name": "Coalossal" },
           { "type": "Steel", "name": "Magnezone" },
@@ -611,7 +627,8 @@
         "name": "martypyds",
         "imgUrl": "",
         "team": 2,
-        "division": "red","pokemons": [
+        "division": "red",
+        "pokemons": [
           { "type": "Bug", "name": "Beautifly" },
           { "type": "Dark", "name": "Obstagoon" },
           { "type": "Dragon", "name": "Salamence", "zMove": true },
@@ -621,7 +638,7 @@
           { "type": "Fire", "name": "Marowak-Alola" },
           { "type": "Flying", "name": "Corviknight" },
           { "type": "Ghost", "name": "Cofagrigus" },
-          { "type": "Grass", "name": "Carnivine" },
+          { "type": "Grass", "name": "Celebi" },
           { "type": "Ground", "name": "Golurk" },
           { "type": "Ice", "name": "Vanilluxe" },
           { "type": "Normal", "name": "Indeedee" },
@@ -655,14 +672,15 @@
           { "type": "Psychic", "name": "Bronzong" },
           { "type": "Rock", "name": "Gigalith" },
           { "type": "Steel", "name": "Durant" },
-          { "type": "Water", "name": "Cramorant" }
+          { "type": "Water", "name": "Lumineon" }
         ]
       },
       {
         "name": "Liljaka",
         "imgUrl": "",
         "team": 25,
-        "division": "yellow","pokemons": [
+        "division": "yellow",
+        "pokemons": [
           { "type": "Bug", "name": "Orbeetle" },
           { "type": "Dark", "name": "Sableye-Mega" },
           { "type": "Dragon", "name": "Appletun" },
@@ -680,14 +698,15 @@
           { "type": "Psychic", "name": "Jirachi" },
           { "type": "Rock", "name": "Omastar" },
           { "type": "Steel", "name": "Duraludon" },
-          { "type": "Water", "name": "Carracosta" }
+          { "type": "Water", "name": "Toxapex" }
         ]
       },
       {
         "name": "TheTired",
         "imgUrl": "",
         "team": 21,
-        "division": "green","pokemons": [
+        "division": "green",
+        "pokemons": [
           { "type": "Bug", "name": "Butterfree" },
           { "type": "Dark", "name": "Moltres-Galar" },
           { "type": "Dragon", "name": "Altaria-Mega" },
